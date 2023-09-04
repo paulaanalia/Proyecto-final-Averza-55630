@@ -16,7 +16,7 @@ urlpatterns = [
    path('create_casa/', Casacreate.as_view() , name="create_casa" ),    
    path('delete_casa/<int:pk>/', Casadelete.as_view(), name="delete_casa" ),
    path('update_casa/<int:pk>/', Casaupdate.as_view(), name="update_casa" ),
-   #path('casa_review/<int:pk>/', Casareview.as_view(), name="casa_review" ),
+   
 
    path('login/', login_usuario, name="login" ),
    path('logout/', LogoutView.as_view(template_name ='casas/logout.html'), name="logout"),
