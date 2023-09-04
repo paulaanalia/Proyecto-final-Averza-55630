@@ -25,7 +25,7 @@ editar_usuario/           Dirige a: Formulario de edicion de datos del usuario
 agregar_avatar/           Dirige a: Formulario para agregar un avatar
 
 
--La busqueda del seach es por menú-
+-La busqueda del search es por menú-
 
 Administrador de Django
 admin: paulaaverza
