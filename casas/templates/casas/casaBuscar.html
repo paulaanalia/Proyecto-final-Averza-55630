@@ -1,0 +1,20 @@
+{% extends 'casas/base.html' %}
+{% load static %}
+
+
+
+
+
+
+{% block contenido %}
+
+<h2>Buscar Casa</h2>
+<form action="/casabuscar2" method="get">
+    {% csrf_token %}
+    <p>Patron a Buscar en casa: <input type="text" name="buscar" id="buscar"></p>
+    <input type="submit" value="Enviar">
+</form>
+
+
+
+{% endblock contenido %}

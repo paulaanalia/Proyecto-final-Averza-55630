@@ -1,0 +1,26 @@
+{% extends 'casas/base.html' %}
+{% load static %}
+
+
+{% block titulo %}
+    
+   Puertas adentro
+
+{% endblock titulo %}
+
+
+
+{% block contenido %}
+
+<h2>Ingresá los datos</h2>
+
+
+<form action="" method="post">
+    {% csrf_token %}
+    <table>
+        {{form.as_table}}
+    </table>
+    <input type="submit" value="Crear casa">
+</form>
+
+{% endblock contenido %}

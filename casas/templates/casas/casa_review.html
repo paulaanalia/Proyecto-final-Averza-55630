@@ -1,0 +1,82 @@
+{% extends 'casas/base.html' %}
+{% load static %}
+
+
+
+
+
+{% block contenido %}
+
+
+<h2>Buscar Casa</h2>
+<form action="/casabuscar2" method="get">
+    {% csrf_token %}
+    <p><input type="text" name="buscar" id="buscar"></p>
+    <input type="submit" value="Enviar">
+</form>
+
+
+  
+   <table>
+      <tr>
+          <td width="200"><h2>Casas</h2></td>
+          <td>
+              <a
+              href="{% url 'create_casa' %}"
+              class="btn btn-primary btn-sm"
+              ><i class="fa fa-plus fa-lg" title="New Record"> </i>
+              </a>
+          </td>
+      </tr>
+   </table>
+
+   
+   {% for c in casa_list  %}
+      <tr>
+         <td>
+            
+            {{c.calle}}
+            {{c.altura}}
+            {{c.departamento}}
+            {{c.localidad}}
+            {{c.anfitrion}}
+            {{c.menu}}
+         </td>
+         <td>
+            <a
+              href="{% url 'update_casa' c.id %}"
+              class="btn btn-primary"
+              style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;"
+              ><i class="fa fa-edit fa-sm" title="Edit Record"></i>
+            </a>
+            <a
+              href="{% url 'delete_casa' c.id %}"
+              class="btn btn-danger"
+              style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;"
+              ><i class="fa fa-trash fa-sm" title="Delete Record"></i>
+            </a>
+          </td>        
+      </tr>
+
+   {% endfor %}
+
+   {% for r in review  %}
+<tr>
+   <td>
+      {{r.valoracion}}
+      {{r.comentario}}
+      
+   </td>
+</tr>
+
+{% endfor %}
+
+
+
+
+
+
+
+      
+
+{% endblock contenido %}
