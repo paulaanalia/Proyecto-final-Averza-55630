@@ -7,7 +7,7 @@
 
 \f0\fs24 \cf0 Nombre del Proyecto: Puertas Adentro. Entrega final del curso de Python/Django - Coderhuose
 
-Funcionalidad: Es una aplicación web donde cada usuario puede crear su perfil y agregar su casa como casa de comida donde los demas usuarios pue
+Funcionalidad: Es una aplicación web donde cada usuario puede crear su perfil y agregar su casa de comida, incluir un menú y datos de contacto para que los demás usuarios puedan interactuar. 
 
 urls:
 about/                    Dirige a: Sobre el autor de la pagima
